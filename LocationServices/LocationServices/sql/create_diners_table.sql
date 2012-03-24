@@ -1,0 +1,12 @@
+CREATE TABLE `diners` (
+  `ID` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `DINER_NAME` varchar(40) NOT NULL,
+  `STREET` varchar(40) NOT NULL,
+  `CITY` varchar(40) NOT NULL,
+  `STATE` varchar(40) NOT NULL,
+  `ZIP` varchar(40) NOT NULL,
+  `WEB_SITE` varchar(40) DEFAULT NULL,
+  `LATITUDE` double DEFAULT NULL,
+  `LONGITUDE` double DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=598 DEFAULT CHARSET=latin1;

@@ -1,0 +1,24 @@
+jQuery(document).ready(function(){ 
+<!--  jQuery("#list").jqGrid({-->
+<!--    url:'http://localhost:8080/DinerServices/DinerServices?latitude=42.11&longitude=-72.11&radius=100',-->
+<!--    datatype: 'xml',-->
+<!--    mtype: 'GET',-->
+<!--    colNames:['Name','Street', 'City','State','Zip','Web Site', 'Latitude', 'Longitude'],-->
+<!--    colModel :[ -->
+<!--      {name:'dinerName', index:'dinerName', width:55}, -->
+<!--      {name:'street', index:'street', width:90}, -->
+<!--      {name:'city', index:'city', width:80, align:'right'}, -->
+<!--      {name:'state', index:'state', width:80, align:'right'}, -->
+<!--      {name:'zip', index:'zip', width:80, align:'right'}, -->
+<!--      {name:'webSite', index:'webSite', width:80, align:'right'},-->
+<!--      {name:'latitude', index:'latitude', width:80, align:'right'},-->
+<!--      {name:'longitude', index:'longitude', width:80, align:'right'}],-->
+<!--    pager: jQuery('#pager'),-->
+<!--    rowNum:10,-->
+<!--    rowList:[10,20,30],-->
+<!--    sortname: 'id',-->
+<!--    sortorder: "desc",-->
+<!--    viewrecords: true,-->
+<!--    imgpath: 'themes/basic/images',-->
+<!--    caption: 'My first grid'-->
+<!--  }); -->
