@@ -33,7 +33,7 @@
     -->
     <Resource name="jdbc/DinerDB" auth="Container" type="javax.sql.DataSource"
                maxActive="100" maxIdle="30" maxWait="10000"
-               username="tgdolanc_tom" password="hon360da" driverClassName="com.mysql.jdbc.Driver"
+               username="tgdolanc_tom" password="hondacl360" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://localhost:3306/tgdolanc_diners"/>
                
     <Resource name="jdbc/DinerDB_local" auth="Container" type="javax.sql.DataSource"
