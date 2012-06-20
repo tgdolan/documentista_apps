@@ -43,10 +43,10 @@ public class DQServices extends HttpServlet {
     public DQServices() {
         super();
         //set JNDI_DATASOURCE based on env. context.xml will have two datasources defined.
-        String env = System.getProperty("serverEnv");
-        if (env.equals("local")) {
-        	JNDI_DATASOURCE = "jdbc/DinerDB_local";
-        }
+//        String env = System.getProperty("serverEnv");
+//        if (env != null && env.equals("local")) {
+//        	JNDI_DATASOURCE = "jdbc/DinerDB_local";
+//        }
        
     }
 

@@ -19,14 +19,14 @@
 	</target>
 	
 	<target name="war" depends="compile">
-		<war destfile="dist/DinerServices.war" webxml="WebContent/WEB-INF/web.xml">
+		<war destfile="dist/LocationServices.war" webxml="WebContent/WEB-INF/web.xml">
 			<fileset dir="WebContent"/>
 			<lib dir="WebContent/WEB-INF/lib"/>
 			<classes dir="build/classes"/>
 		</war>
 	</target>
 	
-	<target name="deploy" depends="war">
+	<target name="ftp" depends="war">
 		<ftp server="ftp.tgdolan.com"
 		       userid="ftp@tgdolan.com "
 		       password="hondacl360ftp!"
@@ -43,5 +43,27 @@
 		<delete dir="dist" />
 		<delete dir="build" />
 	</target>
+	
+	<target name="undeploy" description="undeploy from tomcat">
+			<undeploy 
+				failonerror="no"
+				url="${tomcat-manager-url}"
+				username="${tomcat-manager-username}"
+				password="${tomcat-manager-password}"
+				path="/${project-name}"
+			/>
+		</target>
+		
+		<target name="deploy" description="deploy to tomcat">
+			<echo>deploying from client</echo>
+			<deploy 
+				url="${tomcat-manager-url}"
+				username="tgdolanc"
+				password="h0nd@"
+				path="/${project-name}"
+				
+				war="file:/projects/workspace/${project-name}/${build-directory}/${war-file-name}"
+			/>
+		</target>
 	
 </project>

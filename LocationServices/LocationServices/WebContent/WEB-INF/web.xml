@@ -19,4 +19,14 @@
     <servlet-name>DinerServices</servlet-name>
     <url-pattern>/DinerServices</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>Retrieves DQ information from db</description>
+    <display-name>DQServices</display-name>
+    <servlet-name>DQServices</servlet-name>
+    <servlet-class>org.documentista.services.DQServices</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DQServices</servlet-name>
+    <url-pattern>/DQServices</url-pattern>
+  </servlet-mapping>
 </web-app>

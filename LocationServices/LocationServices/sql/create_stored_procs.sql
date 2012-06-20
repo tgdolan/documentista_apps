@@ -19,24 +19,24 @@ pi()/180 / 2), 2) )) );
 
 delimiter //
 
-DROP PROCEDURE IF EXISTS `diners`.`GetAllDiners`
+DROP PROCEDURE IF EXISTS `diners`.`GetAllDQs`
 //
-CREATE DEFINER=`tom`@`localhost` PROCEDURE `GetAllDiners`()
+CREATE DEFINER=`tgdolanc_tom`@`localhost` PROCEDURE `GetAllDQs`()
 BEGIN
-SELECT * FROM DINERS;
+SELECT * FROM DAIRY_QUEENS;
 END
 //
 
 
 delimiter //
 
-DROP PROCEDURE IF EXISTS `diners`.`GetDinersWithinRadius`
+DROP PROCEDURE IF EXISTS `diners`.`GetDQsWithinRadius`
 //
-CREATE DEFINER=`tom`@`localhost` PROCEDURE `GetDinersWithinRadius`(IN originLat double, IN originLon double, IN dist int)
+CREATE DEFINER=`tgdolanc_tom`@`localhost` PROCEDURE `GetDQsWithinRadius`(IN originLat double, IN originLon double, IN dist int)
 BEGIN
 
 SELECT *, GetDistance(originLat, originLon, dest.latitude, dest.longitude)  as distance
-FROM diners dest
+FROM DAIRY_QUEENS dest
 having distance < dist
 ORDER BY distance;
 
